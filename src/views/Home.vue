@@ -4,13 +4,11 @@
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-
-export default {
-  name: 'Home',
-  components: {
-
-  }
-}
+<script lang='ts'>
+  import { defineComponent } from '@vue/composition-api';
+  export default defineComponent({
+    setup() {
+      return {};
+    }
+  })
 </script>
