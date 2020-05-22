@@ -36,7 +36,7 @@ export default defineComponent({
 <style>
 .home {
     position: relative;
-    background: burlywood;
+    /* background: burlywood; */
 }
 path {
     stroke-width: 0.2;
