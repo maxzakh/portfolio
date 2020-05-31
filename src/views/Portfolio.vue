@@ -29,10 +29,12 @@ type Project = {
 
 const projectsArray: Project[] = [
     {
-        title: "Mobile Web App",
+        title: "Angular Quiz",
         description:
             "Within this project, I was responsible for the frontend. It’s written in React.js. Additionally, I've created the HTML and CSS templates.",
-        demo: "https://www.github.com/maxzakh"
+        preview: 
+            "https://raw.githubusercontent.com/maxzakh/angular-quiz/master/src/assets/preview.png",
+        demo: "https://maxzakh.github.io/angular-quiz/"
     },
     {
         title: "My-Flix Application",
@@ -43,10 +45,11 @@ const projectsArray: Project[] = [
         demo: "https://movies-my-flix-server.herokuapp.com/client/"
     },
     {
-        title: "Mobile Web App",
+        title: "Vue Todo",
         description:
             "Within this project, I was responsible for the frontend. It’s written in React.js. Additionally, I've created the HTML and CSS templates.",
-        demo: "https://www.github.com/maxzakh"
+        preview: "https://raw.githubusercontent.com/maxzakh/vue-todo/master/src/assets/preview.png",
+        demo: "https://maxzakh.github.io/vue-todo/"
     }
 ];
 
