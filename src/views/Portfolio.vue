@@ -31,7 +31,7 @@ const projectsArray: Project[] = [
     {
         title: "Angular Quiz",
         description:
-            "Within this project, I was responsible for the frontend. It’s written in React.js. Additionally, I've created the HTML and CSS templates.",
+            "A responsive Single Page Application hosted on Github Pages that displays question data from the OpenTrivia API. Styled with Angular Material Design and CSS.",
         preview: 
             "https://raw.githubusercontent.com/maxzakh/angular-quiz/master/src/assets/preview.png",
         demo: "https://maxzakh.github.io/angular-quiz/"
@@ -39,7 +39,7 @@ const projectsArray: Project[] = [
     {
         title: "My-Flix Application",
         description:
-            "Within this project, I was responsible for the frontend. It’s written in React.js. Additionally, I've created the HTML and CSS templates.",
+            "A website hosted on Heroku that displays information on select movies. Users can create an account that uses OAuth to verify their identity and add/remove movies from a favorites list. Movie database created using MongoDB and hosted on MongoDB Atlas to allow users to store and update information. Front end client portal created with React.",
         preview:
             "https://raw.githubusercontent.com/maxzakh/myFlix/master/client/src/assets/preview.png",
         demo: "https://movies-my-flix-server.herokuapp.com/client/"
@@ -47,7 +47,7 @@ const projectsArray: Project[] = [
     {
         title: "Vue Todo",
         description:
-            "Within this project, I was responsible for the frontend. It’s written in React.js. Additionally, I've created the HTML and CSS templates.",
+            "A responsive todo checklist that allows users to add and remove tasks. Checklist has several customizable views for active and completed tasks.",
         preview: "https://raw.githubusercontent.com/maxzakh/vue-todo/master/src/assets/preview.png",
         demo: "https://maxzakh.github.io/vue-todo/"
     }
