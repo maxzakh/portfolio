@@ -10,7 +10,7 @@
                 <div class="project_description">{{project.description}}</div>
                 <div class="project_demo">
                     Demo:
-                    <a :href="project.demo" target="_blank">Github</a>
+                    <a :href="project.demo" target="_blank">{{project.demo}}</a>
                 </div>
             </div>
         </div>
@@ -28,6 +28,14 @@ type Project = {
 };
 
 const projectsArray: Project[] = [
+    {
+        title: "Kcrafts",
+        description:
+            "An eCommerce jewelry website where you can buy gemstone bracelets and necklaces.",
+        preview: 
+            "https://raw.githubusercontent.com/maxzakh/angular-quiz/master/src/assets/preview.png",
+        demo: "https://kcrafts.net/"
+    },
     {
         title: "Angular Quiz",
         description:
