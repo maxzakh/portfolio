@@ -2,9 +2,16 @@
     <div class="home">
         <!-- <img id="tracks" width="120px" height="120px" src="assets/footprints.svg"> -->
 
-        <div class="steps"></div>
+        <!-- <div class="steps"></div> -->
 
-        <svg class="footprint-el" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.9 16.9">
+        <svg
+            v-for="step of steps"
+            :key="step"
+            class="footprint-el"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16.9 16.9"
+            :style="stepStyle(step)"
+        >
             <path
                 d="M5 5.4C6 4 6.8 3.8 7.8 3.6 14.8 3 16.6 6 10.3 7 9 7.2 2.6 8.7 4.9 5.4zM1.3 7.7c-.5.7-.6 1.7-.1 2 .4.2 1.6.4 1.9 0 .3-.4 1.2-1 .9-1.9-.4-1-2.4-.4-2.7 0zM8 12.7c1.6.5 2.5 0 3.4-.5 5.6-4 5.2-7.4-.4-4.1-1 .6-7 3.6-3 4.6zM3.7 13.3c-.9-.2-1.6-1-1.4-1.5.2-.4 1-1.3 1.5-1.2.5.1 1.5 0 1.9.9.3 1-1.6 1.8-2 1.8z"
             />
@@ -39,15 +46,61 @@
 </template>
 
 <script lang='ts'>
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent, ref } from "@vue/composition-api";
 export default defineComponent({
     setup() {
-        return {};
+        const steps = ref([0, 1, 2, 3, 4]);
+
+        function stepStyle(step: number): string {
+            let isEven = step % 2 === 0;
+            let x = step * 10;
+            let y = isEven ? 40 : 50;
+            let delayStep = 3 / steps.value.length;
+            let delay = step * delayStep;
+            return `top: ${y}%; left: ${x}%; animation-delay: ${delay}s`;
+        }
+
+        return {
+            steps,
+            stepStyle,
+        };
     },
 });
 </script>
 
 <style lang="scss">
+@keyframes stepping {
+    0% {
+        opacity: .2;
+    }
+    5% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.footprint-el {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    // background-color: red;
+    animation: 10s stepping infinite;
+
+    path {
+        fill: black;
+        stroke: white;
+        stroke-width: 0.25;
+    }
+}
+
 .home {
     position: relative;
     /* background: burlywood; */
@@ -100,86 +153,6 @@ path {
     display: flex;
     width: 100%;
     padding: 20px;
-}
-
-.footprint-el {
-    height: 100px;
-    width: 100px;
-
-    path {
-        fill: black;
-        stroke: white;
-        stroke-width: 0.25;
-    }
-
-    .a {
-        transform: translate(0, 5px);
-        fill: red;
-    }
-
-    .b {
-        transform: translate(10px, 0);
-        fill: green;
-    }
-}
-
-.steps {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-color: red;
-    height: 100%;
-    width: 100%;
-    background-size: 164px 164px;
-    background-image: url(../assets/footprints.svg);
-    background-repeat: no-repeat;
-    /* background-position: 100px 300px; */
-    animation: 10s steps-anim infinite;
-    animation-timing-function: steps(1);
-}
-
-$x-a: 0%;
-$x-step: 10%;
-$y-a: 85%;
-$y-b: 95%;
-
-@keyframes steps-anim {
-    0% {
-        background-position: 0 0;
-    }
-    10% {
-        background-position: $x-a+$x-step*1 $y-a;
-    }
-    20% {
-        background-position: $x-a+$x-step*2 $y-b;
-    }
-    30% {
-        background-position: $x-a+$x-step*3 $y-a;
-    }
-    40% {
-        background-position: $x-a+$x-step*4 $y-b;
-    }
-    50% {
-        background-position: $x-a+$x-step*5 $y-a;
-    }
-
-    60% {
-        background-position: $x-a+$x-step*6 $y-b;
-    }
-    70% {
-        background-position: $x-a+$x-step*7 $y-a;
-    }
-
-    80% {
-        background-position: $x-a+$x-step*8 $y-b;
-    }
-    90% {
-        background-position: $x-a+$x-step*9 $y-a;
-    }
-    100% {
-        background-position: $x-a+$x-step*10 $y-b;
-    }
 }
 
 @keyframes moving {
