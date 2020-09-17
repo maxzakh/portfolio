@@ -18,9 +18,9 @@
         </svg>
 
         <div class="welcome">
-            <h1>Hi, my name is Max and I design webpages and make web apps</h1>
-            <p>I like learning new tech and implementing solutions</p>
-            <p>If you have an idea, let me help you bring it to life</p>
+            <h1>Hi, my name is Max</h1>
+            <p>Full stack developer by day</p>
+            <p>Student by night</p>
             <p>Check out my Portfolio to see my projects and websites I have worked on</p>
         </div>
 
@@ -111,6 +111,7 @@ export default defineComponent({
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    width: 40%;
 }
 .welcome h1 {
     color: white;
