@@ -110,8 +110,8 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    width: 40%;
+    align-items: center;
+    height: 100%;
 }
 .welcome h1 {
     color: white;
