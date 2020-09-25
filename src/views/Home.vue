@@ -4,7 +4,7 @@
 
         <!-- <div class="steps"></div> -->
 
-        <svg
+        <!-- <svg
             v-for="step of steps"
             :key="step"
             class="footprint-el"
@@ -15,7 +15,7 @@
             <path
                 d="M5 5.4C6 4 6.8 3.8 7.8 3.6 14.8 3 16.6 6 10.3 7 9 7.2 2.6 8.7 4.9 5.4zM1.3 7.7c-.5.7-.6 1.7-.1 2 .4.2 1.6.4 1.9 0 .3-.4 1.2-1 .9-1.9-.4-1-2.4-.4-2.7 0zM8 12.7c1.6.5 2.5 0 3.4-.5 5.6-4 5.2-7.4-.4-4.1-1 .6-7 3.6-3 4.6zM3.7 13.3c-.9-.2-1.6-1-1.4-1.5.2-.4 1-1.3 1.5-1.2.5.1 1.5 0 1.9.9.3 1-1.6 1.8-2 1.8z"
             />
-        </svg>
+        </svg> -->
 
         <div class="welcome">
             <h1>Hi, my name is Max</h1>
@@ -103,7 +103,6 @@ export default defineComponent({
 
 .home {
     position: relative;
-    /* background: burlywood; */
 }
 .welcome {
     color: white;

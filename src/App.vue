@@ -51,7 +51,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     font-size: 1.4em;
-    background-color: blueviolet;
+    background-color: #444586;
 
     a {
         padding: 0.5em;
@@ -61,7 +61,7 @@ body {
 }
 
 .page-footer {
-    background-color: blueviolet;
+    background-color: #444789;
     display: flex;
     justify-content: center;
     align-items: center;
