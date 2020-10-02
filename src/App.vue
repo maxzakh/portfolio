@@ -24,8 +24,6 @@
 </template>
 
 <style lang="scss">
-html {
-}
 
 * {
     margin: 0;

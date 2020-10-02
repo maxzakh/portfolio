@@ -33,7 +33,7 @@ const projectsArray: Project[] = [
         description:
             "An eCommerce jewelry website where you can buy gemstone bracelets and necklaces.",
         preview: 
-            "https://raw.githubusercontent.com/maxzakh/angular-quiz/master/src/assets/preview.png",
+            "src/assets/kcrafts-preview.png",
         demo: "https://kcrafts.net/"
     },
     {
