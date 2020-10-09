@@ -1,21 +1,19 @@
 <template>
     <div class="home">
-        <!-- <img id="tracks" width="120px" height="120px" src="assets/footprints.svg"> -->
-
-        <!-- <div class="steps"></div> -->
-
-        <!-- <svg
-            v-for="step of steps"
-            :key="step"
-            class="footprint-el"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16.9 16.9"
-            :style="stepStyle(step)"
-        >
-            <path
-                d="M5 5.4C6 4 6.8 3.8 7.8 3.6 14.8 3 16.6 6 10.3 7 9 7.2 2.6 8.7 4.9 5.4zM1.3 7.7c-.5.7-.6 1.7-.1 2 .4.2 1.6.4 1.9 0 .3-.4 1.2-1 .9-1.9-.4-1-2.4-.4-2.7 0zM8 12.7c1.6.5 2.5 0 3.4-.5 5.6-4 5.2-7.4-.4-4.1-1 .6-7 3.6-3 4.6zM3.7 13.3c-.9-.2-1.6-1-1.4-1.5.2-.4 1-1.3 1.5-1.2.5.1 1.5 0 1.9.9.3 1-1.6 1.8-2 1.8z"
-            />
-        </svg> -->
+        <div class="steps">
+            <svg
+                v-for="step of steps"
+                :key="step"
+                class="footprint-el"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16.9 16.9"
+                :style="stepStyle(step)"
+            >
+                <path
+                    d="M5 5.4C6 4 6.8 3.8 7.8 3.6 14.8 3 16.6 6 10.3 7 9 7.2 2.6 8.7 4.9 5.4zM1.3 7.7c-.5.7-.6 1.7-.1 2 .4.2 1.6.4 1.9 0 .3-.4 1.2-1 .9-1.9-.4-1-2.4-.4-2.7 0zM8 12.7c1.6.5 2.5 0 3.4-.5 5.6-4 5.2-7.4-.4-4.1-1 .6-7 3.6-3 4.6zM3.7 13.3c-.9-.2-1.6-1-1.4-1.5.2-.4 1-1.3 1.5-1.2.5.1 1.5 0 1.9.9.3 1-1.6 1.8-2 1.8z"
+                />
+            </svg>
+        </div>
 
         <div class="welcome">
             <h1>Hi, my name is Max</h1>
@@ -24,24 +22,22 @@
             <p>Check out my Portfolio to see my projects and websites I have worked on</p>
         </div>
 
-        <!-- <svg class="link-a link-shape" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M12,22.57L8.89,23.52L5.98,22.32L3.49,20.41L1.58,17.92L0.38,15.01L1.33,11.9L0.38,8.79L1.58,5.88L3.49,3.39L5.98,1.48L8.89,0.28L12,1.23L15.11,0.28L18.02,1.48L20.51,3.39L22.42,5.88L23.62,8.79L22.67,11.9L23.62,15.01L22.42,17.92L20.51,20.41L18.02,22.32L15.11,23.52z"
-            />
-            <text x="9" y="14" class="small">Home</text>
-        </svg>-->
-        <!-- <svg class="link-b link-shape" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M12,22.57L8.89,23.52L5.98,22.32L3.49,20.41L1.58,17.92L0.38,15.01L1.33,11.9L0.38,8.79L1.58,5.88L3.49,3.39L5.98,1.48L8.89,0.28L12,1.23L15.11,0.28L18.02,1.48L20.51,3.39L22.42,5.88L23.62,8.79L22.67,11.9L23.62,15.01L22.42,17.92L20.51,20.41L18.02,22.32L15.11,23.52z"
-            />
-            <text x="9" y="14" class="small">Portfolio</text>
-        </svg>
-        <svg class="link-c link-shape" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M12,22.57L8.89,23.52L5.98,22.32L3.49,20.41L1.58,17.92L0.38,15.01L1.33,11.9L0.38,8.79L1.58,5.88L3.49,3.39L5.98,1.48L8.89,0.28L12,1.23L15.11,0.28L18.02,1.48L20.51,3.39L22.42,5.88L23.62,8.79L22.67,11.9L23.62,15.01L22.42,17.92L20.51,20.41L18.02,22.32L15.11,23.52z"
-            />
-            <text x="9" y="14" class="small">About</text>
-        </svg>-->
+
+        <div class="container">
+            <h3>Contact Form</h3>
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
     </div>
 </template>
 
@@ -71,7 +67,7 @@ export default defineComponent({
 <style lang="scss">
 @keyframes stepping {
     0% {
-        opacity: .2;
+        opacity: 0.2;
     }
     5% {
         opacity: 1;
@@ -103,6 +99,9 @@ export default defineComponent({
 
 .home {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .welcome {
     color: white;
@@ -110,7 +109,7 @@ export default defineComponent({
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    // height: 100%;
 }
 .welcome h1 {
     color: white;
@@ -162,5 +161,37 @@ path {
     to {
         transform: translate(50%, 50%);
     }
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
 </style>
